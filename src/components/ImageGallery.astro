@@ -1,0 +1,199 @@
+---
+// Gallery component with fullscreen popup
+---
+
+<section class="py-16 bg-light-bg dark:bg-dark-bg">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-light-text dark:text-dark-text">
+      Our Gallery
+    </h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Gallery Images -->
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" 
+          alt="Modern office space"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+      
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop" 
+          alt="Team collaboration"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+      
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop" 
+          alt="Creative workspace"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+      
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" 
+          alt="Business meeting"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+      
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1497366672149-e5e4b4d34eb3?w=800&h=600&fit=crop" 
+          alt="Technology hub"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+      
+      <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop" 
+          alt="Innovation center"
+          class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fullscreen Modal -->
+<div 
+  id="image-modal" 
+  class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm"
+>
+  <button 
+    id="close-modal"
+    aria-label="Close modal"
+    class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+  >
+    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+  
+  <div class="flex items-center justify-center h-full p-4">
+    <img 
+      id="modal-image" 
+      src="" 
+      alt="" 
+      class="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+    />
+  </div>
+  
+  <!-- Navigation Buttons -->
+  <button 
+    id="prev-image"
+    aria-label="Previous image"
+    class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors"
+  >
+    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+    </svg>
+  </button>
+  
+  <button 
+    id="next-image"
+    aria-label="Next image"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors"
+  >
+    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  let currentImageIndex = 0;
+  let galleryImages: NodeListOf<HTMLImageElement>;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image') as HTMLImageElement;
+    const closeModal = document.getElementById('close-modal');
+    const prevButton = document.getElementById('prev-image');
+    const nextButton = document.getElementById('next-image');
+    galleryImages = document.querySelectorAll('.gallery-item img');
+
+    // Open modal on image click
+    galleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentImageIndex = index;
+        openModal(img.src, img.alt);
+      });
+    });
+
+    // Close modal
+    closeModal?.addEventListener('click', () => {
+      modal?.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Close on background click
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal?.classList.contains('hidden')) {
+        modal?.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Previous image
+    prevButton?.addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      const img = galleryImages[currentImageIndex];
+      if (modalImage) {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+      }
+    });
+
+    // Next image
+    nextButton?.addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      const img = galleryImages[currentImageIndex];
+      if (modalImage) {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!modal?.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+          prevButton?.click();
+        } else if (e.key === 'ArrowRight') {
+          nextButton?.click();
+        }
+      }
+    });
+
+    function openModal(src: string, alt: string) {
+      if (modalImage && modal) {
+        modalImage.src = src;
+        modalImage.alt = alt;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  });
+</script>
+

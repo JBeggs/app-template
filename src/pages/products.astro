@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Products - YourBrand" description="Explore our range of professional products and solutions">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-light-text dark:text-dark-text mb-6">
+          Our Products
+        </h1>
+        <p class="text-xl text-light-muted dark:text-dark-muted">
+          Professional solutions designed to help your business thrive
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid Section -->
+  <section class="py-16 bg-light-card dark:bg-dark-card">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        
+        <!-- Product 1 -->
+        <div class="bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" 
+              alt="Analytics Pro"
+              class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-4 text-light-text dark:text-dark-text">Analytics Pro</h3>
+            <p class="text-light-muted dark:text-dark-muted mb-6 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Advanced data visualization</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Real-time reporting</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Custom dashboards</span>
+              </li>
+            </ul>
+            <a 
+              href="/contact" 
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" 
+              alt="Cloud Suite"
+              class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-4 text-light-text dark:text-dark-text">Cloud Suite</h3>
+            <p class="text-light-muted dark:text-dark-muted mb-6 leading-relaxed">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Scalable infrastructure</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>99.9% uptime guarantee</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Automatic backups</span>
+              </li>
+            </ul>
+            <a 
+              href="/contact" 
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop" 
+              alt="Security Shield"
+              class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-4 text-light-text dark:text-dark-text">Security Shield</h3>
+            <p class="text-light-muted dark:text-dark-muted mb-6 leading-relaxed">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>End-to-end encryption</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Threat detection</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>24/7 monitoring</span>
+              </li>
+            </ul>
+            <a 
+              href="/contact" 
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop" 
+              alt="Team Connect"
+              class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-4 text-light-text dark:text-dark-text">Team Connect</h3>
+            <p class="text-light-muted dark:text-dark-muted mb-6 leading-relaxed">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Video conferencing</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>File sharing</span>
+              </li>
+              <li class="flex items-start text-light-text dark:text-dark-text">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Project management</span>
+              </li>
+            </ul>
+            <a 
+              href="/contact" 
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Comparison Section -->
+  <section class="py-16 bg-light-bg dark:bg-dark-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-light-text dark:text-dark-text">
+        Why Choose Our Products?
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Lightning Fast</h3>
+          <p class="text-light-muted dark:text-dark-muted text-sm">
+            Optimized for speed and performance
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Secure by Default</h3>
+          <p class="text-light-muted dark:text-dark-muted text-sm">
+            Enterprise-grade security built in
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Always Updated</h3>
+          <p class="text-light-muted dark:text-dark-muted text-sm">
+            Regular updates and improvements
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-800 dark:to-indigo-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Contact us today to learn more about our products and how they can help your business
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+      >
+        Contact Sales
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+

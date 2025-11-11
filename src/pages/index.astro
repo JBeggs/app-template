@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+---
+
+<BaseLayout title="Home - YourBrand" description="Welcome to YourBrand - Your trusted partner for professional solutions">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-20 md:py-32">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-light-text dark:text-dark-text mb-6">
+          Welcome to YourBrand
+        </h1>
+        <p class="text-xl md:text-2xl text-light-muted dark:text-dark-muted mb-8">
+          Delivering excellence through innovation and quality service
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/products" 
+            class="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            View Products
+          </a>
+          <a 
+            href="/contact" 
+            class="px-8 py-4 bg-white dark:bg-gray-800 text-light-text dark:text-dark-text rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-light-card dark:bg-dark-card">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-light-text dark:text-dark-text">
+        Why Choose Us
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-light-bg dark:bg-dark-bg p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-light-text dark:text-dark-text">Fast & Reliable</h3>
+          <p class="text-light-muted dark:text-dark-muted leading-relaxed">
+            Lightning-fast performance and rock-solid reliability ensure your business runs smoothly 24/7.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-light-bg dark:bg-dark-bg p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-light-text dark:text-dark-text">Secure & Safe</h3>
+          <p class="text-light-muted dark:text-dark-muted leading-relaxed">
+            Enterprise-grade security measures protect your data and ensure complete peace of mind.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-light-bg dark:bg-dark-bg p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-light-text dark:text-dark-text">Expert Support</h3>
+          <p class="text-light-muted dark:text-dark-muted leading-relaxed">
+            Our dedicated team of experts is always ready to help you succeed and grow your business.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <ImageGallery />
+
+  <!-- Products Breakdown Section -->
+  <section class="py-16 bg-light-card dark:bg-dark-card">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-4 text-light-text dark:text-dark-text">
+        Our Products
+      </h2>
+      <p class="text-center text-light-muted dark:text-dark-muted mb-12 max-w-2xl mx-auto">
+        Discover our range of professional solutions designed to help your business thrive
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div class="group bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" 
+              alt="Product 1"
+              class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Analytics Pro</h3>
+            <p class="text-light-muted dark:text-dark-muted text-sm mb-4">
+              Advanced analytics and reporting tools for data-driven decisions.
+            </p>
+            <a href="/products" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="group bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" 
+              alt="Product 2"
+              class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Cloud Suite</h3>
+            <p class="text-light-muted dark:text-dark-muted text-sm mb-4">
+              Scalable cloud infrastructure for modern businesses.
+            </p>
+            <a href="/products" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="group bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop" 
+              alt="Product 3"
+              class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Security Shield</h3>
+            <p class="text-light-muted dark:text-dark-muted text-sm mb-4">
+              Comprehensive security solutions to protect your assets.
+            </p>
+            <a href="/products" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="group bg-light-bg dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop" 
+              alt="Product 4"
+              class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-light-text dark:text-dark-text">Team Connect</h3>
+            <p class="text-light-muted dark:text-dark-muted text-sm mb-4">
+              Collaboration tools that bring teams together seamlessly.
+            </p>
+            <a href="/products" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a 
+          href="/products" 
+          class="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+        >
+          View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-800 dark:to-indigo-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Join thousands of satisfied customers who trust us with their business needs
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+      >
+        Contact Us Today
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
