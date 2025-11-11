@@ -18,8 +18,12 @@ const { title, description = 'Professional business template' } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Montserrat from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-300">
+  <body class="font-sans bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-300">
     <Header />
     <main class="min-h-screen">
       <slot />
